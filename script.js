@@ -19,13 +19,32 @@ window.addEventListener("load", function() {
      let copilotInput = document.querySelector("input[name=copilotName]");
      let fuel = document.querySelector("input[name=fuelLevel]");
      let cargo = document.querySelector("input[name=cargoWeight]");
-     if (pilotInput.value === "" || copilotInput.value === "" || isNaN(fuel.value) || isNaN(cargo.value)){
+     if (pilotInput.value === "" || copilotInput.value === "" || (fuel.value)==="" || cargo.value===""){
        alert("All fields required!");
        event.preventDefault();
      }
    });
  });
 
+window.addEventListener("load", function() {
+  let form = document.querySelector("form");
+  form.addEventListener("submit", function(event) {
+    fuel = document.querySelector("input[name=fuelLevel]");
+    cargo = document.querySelector("input[name=cargoWeight]");
+    if (isNaN(fuel.value) || isNaN(cargo.value)){
+      alert("Information invalid!");
+      event.preventDefault();
+      }
+    });
+  });
 
+  // window.addEventListener("load", function() {
+  // form = document.querySelector("form");
+  // form.addEventListener("submit", funtion(event){
+  //      pStatus = document.querySelector("#pilotStatus");
+  //      cStatus = document.querySelector("#copilotStatus");
+  //      if ()
+  //   }
+  // });
 
 
