@@ -23,28 +23,29 @@ window.addEventListener("load", function() {
        alert("All fields required!");
        event.preventDefault();
      }
+      else if (isNaN(fuel.value) || isNaN(cargo.value)){
+      alert("Information invalid!");
+      event.preventDefault();
+     }
+    //  else {
+    //    document.getElementById("pilotStatus").innerHTML = `${pilotInput} is ready for launch.`;
+    //    document.getElementById("copilotStatus").innerHTML = `${copilotInput} is ready for launch.`;
+    //    console.log("hellooooo");
+    //    /// all validation in here
+    //  }
    });
  });
 
-window.addEventListener("load", function() {
+
+
+window.addEventListener("load", function(){
   let form = document.querySelector("form");
-  form.addEventListener("submit", function(event) {
-    fuel = document.querySelector("input[name=fuelLevel]");
-    cargo = document.querySelector("input[name=cargoWeight]");
-    if (isNaN(fuel.value) || isNaN(cargo.value)){
-      alert("Information invalid!");
-      event.preventDefault();
-      }
-    });
-  });
-
-  // window.addEventListener("load", function() {
-  // form = document.querySelector("form");
-  // form.addEventListener("submit", funtion(event){
-  //      pStatus = document.querySelector("#pilotStatus");
-  //      cStatus = document.querySelector("#copilotStatus");
-  //      if ()
-  //   }
-  // });
-
+  form.addEventListener("submit", function(event){
+    let cargo = document.querySelector("input[name=cargoWeight]");
+    if (cargo.value > 10000){
+      let test = document.getElementById("cargoStatus").innerHTML = `${cargo} is too heavy.`
+      console.log(test);
+    }
+  })
+})
 
