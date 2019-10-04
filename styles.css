@@ -6,9 +6,9 @@ div {
     text-align: left;
 }
 
-#faultyItems {
-    visibility: visible;   
-}
+/* #faultyItems {
+    visibility: hidden;   
+} */
 
 #launchForm {
     background-color: #ECF0F1;
