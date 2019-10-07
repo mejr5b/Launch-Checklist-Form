@@ -30,6 +30,7 @@ window.addEventListener("load", function() {
      };
      if(fuelLow){
        document.getElementById("fuelStatus").style.visibility = "visible";
+       document.getElementById("cargoStatus").style.visibility = "visible";
        document.getElementById("fuelStatus").innerHTML = "Not enough fuel for launch!";
        document.getElementById("fuelStatus").style.color = "red";
        document.querySelector("h2").innerHTML = "Shuttle not ready for launch";
@@ -37,6 +38,7 @@ window.addEventListener("load", function() {
      };
      if(cargoHigh){
        document.getElementById("cargoStatus").style.visibility = "visible";
+       document.getElementById("fuelStatus").style.visibility = "visibile";
        document.getElementById("cargoStatus").innerHTML = "Too much mass for take off!";
        document.getElementById("cargoStatus").style.color = "red";
        document.querySelector("h2").innerHTML = "Shuttle not ready for launch";
