@@ -13,10 +13,12 @@ window.addEventListener("load", function() {
 
      if (pilotInput.value === "" || copilotInput.value === "" || (fuel.value)==="" || cargo.value===""){
        alert("All fields required!");
+       document.querySelector("faultyItems").style.visibility = "hidden";
        event.preventDefault();
      }
       else if (isNaN(fuel.value) || isNaN(cargo.value)){
       alert("Information invalid!");
+      document.querySelector("faultyItems").style.visibility = "hidden";
       event.preventDefault();
      }
      else {
