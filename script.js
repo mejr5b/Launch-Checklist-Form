@@ -47,6 +47,10 @@ window.addEventListener("load", function() {
      if(!fuelLow && !cargoHigh){
        document.querySelector("h2").innerHTML = "Shuttle is ready for launch";
        document.querySelector("h2").style.color = "green";
+       document.getElementById("cargoStatus").innerHTML = "Cargo weight low enough for launch";
+       document.getElementById("cargoStatus").style.color = "black";
+       document.getElementById("fuelStatus").innerHTML = "Fuel level high enough for launch";
+       document.getElementById("fuelStatus").style.color = "black";
      }
    });
  });
